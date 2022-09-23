@@ -1,0 +1,7 @@
+# mvnw clean package
+FROM openjdk:17-alpine
+COPY target/ms.admin-1.0.jar /usr/app.jar
+EXPOSE 8081
+ENTRYPOINT ["java","-jar","/usr/app.jar"]
+# docker build -t ms-admin-server .
+# docker run -d --name ms-admin-server -p 8081:8081 ms-admin-server
